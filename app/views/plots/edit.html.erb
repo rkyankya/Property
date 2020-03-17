@@ -1,6 +1,13 @@
-<h1>Editing Plot</h1>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
-<%= render 'form', plot: @plot %>
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    
+    <h1 class="h2">Editing Plot</h1>
+  </div>
 
-<%= link_to 'Show', @plot %> |
-<%= link_to 'Back', plots_path %>
+
+        <%= render 'form', plot: @plot %>
+
+        <%= link_to 'Show', @plot %> |
+        <%= link_to 'Back', plots_path %>
+</main>

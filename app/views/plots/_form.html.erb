@@ -1,17 +1,18 @@
+<div class="form-signin">
+  <%= simple_form_for(@plot) do |f| %>
+    <%= f.error_notification %>
+    <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
-<%= simple_form_for(@plot) do |f| %>
-  <%= f.error_notification %>
-  <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
+    <div class="form-inputs">
+      <%= f.input :name, class: "form-control", id: "inputText", placeholder: "Name" %>
+      <%= f.input :address, class: "form-control", id: "inputText", placeholder: "Address" %>
+      <%= f.input :price, class: "form-control", id: "inputInteger", placeholder: "Price" %>
+      <%= f.input :rooms, class: "form-control", id: "inputInteger", placeholder: "Rooms" %>
+      <%= f.input :bathrooms, class: "form-control", id: "inputInteger", placeholder: "Bathrooms" %>
+    </div>
 
-  <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :address %>
-    <%= f.input :price %>
-    <%= f.input :rooms %>
-    <%= f.input :bathrooms %>
-  </div>
-
-  <div class="form-actions">
-    <%= f.button :submit %>
-  </div>
-<% end %>
+    <div class="form-actions">
+      <%= f.button :submit, class: "btn btn-lg btn-primary btn-block", type: "submit" %>
+    </div>
+  <% end %>
+</div>

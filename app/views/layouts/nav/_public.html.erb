@@ -1,5 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark
-    ftco-navbar-light" id="ftco-navbar">
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
   <div class="container">
     <a class="navbar-brand" href="/">Property Finder</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav"
@@ -8,6 +7,13 @@
     </button>
     <div class="collapse navbar-collapse" id="ftco-nav">
       <ul class="navbar-nav ml-auto">
+      <% if account_signed_in? %>
+      <li class="nav-item active">
+          <a href="/dashboard" class="nav-link">Dashboard</a>
+      </li>
+      <% else %>
+
+      <% end %>
         <li class="nav-item active">
           <a href="#" class="nav-link">Latest</a>
         </li>
@@ -17,12 +23,18 @@
         <li class="nav-item">
           <a class="nav-link" href="#">Advertising</a>
         </li>
+      <% if account_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "Log Out", destroy_account_session_path, class: "nav-link", method: :delete %>
+        </li>
+      <% else %>
         <li class="nav-item">
           <a href="/accounts/sign_in" class="nav-link"><span>Log In</span></a>
         </li>
         <li class="nav-item">
           <a href="/accounts/sign_up" class="nav-link"><span>Sign Up</span></a>
         </li>
+      <% end %>
       </ul>
     </div>
   </div>

@@ -1,35 +1,42 @@
-<p id="notice"><%= notice %></p>
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
 
-<h1>Plots</h1>
+  <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+    
+    <h1 class="h2">Plots</h1>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address</th>
-      <th>Price</th>
-      <th>Rooms</th>
-      <th>Bathrooms</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+    <div class="table-responsive">
+    <table class="table table-striped table-sm">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Name</th>
+          <th scope="col">Address</th>
+          <th scope="col">Price</th>
+          <th scope="col">Rooms</th>
+          <th scope="col">Bathrooms</th>
+          
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @plots.each do |plot| %>
-      <tr>
-        <td><%= plot.name %></td>
-        <td><%= plot.address %></td>
-        <td><%= plot.price %></td>
-        <td><%= plot.rooms %></td>
-        <td><%= plot.bathrooms %></td>
-        <td><%= link_to 'Show', plot %></td>
-        <td><%= link_to 'Edit', edit_plot_path(plot) %></td>
-        <td><%= link_to 'Destroy', plot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @plots.each do |plot| %>
+          <tr>
+            <td scope="row"><%= plot.name %></td>
+            <td><%= plot.address %></td>
+            <td><%= plot.price %></td>
+            <td><%= plot.rooms %></td>
+            <td><%= plot.bathrooms %></td>
+            <td><%= link_to 'Show', plot %></td>
+            <td><%= link_to 'Edit', edit_plot_path(plot) %></td>
+            <td><%= link_to 'Destroy', plot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+    <br>
 
-<%= link_to 'New Plot', new_plot_path %>
+    <%= link_to 'New Plot', new_plot_path %>
+
+  </div>
+</main>
