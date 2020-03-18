@@ -1,14 +1,16 @@
-<div class="form-signin">
+<div class="row">
   <%= simple_form_for(@plot) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :name, class: "form-control", id: "inputText", placeholder: "Name" %>
-      <%= f.input :address, class: "form-control", id: "inputText", placeholder: "Address" %>
-      <%= f.input :price, class: "form-control", id: "inputInteger", placeholder: "Price" %>
-      <%= f.input :rooms, class: "form-control", id: "inputInteger", placeholder: "Rooms" %>
-      <%= f.input :bathrooms, class: "form-control", id: "inputInteger", placeholder: "Bathrooms" %>
+      <%= f.input :name, class: "form-control", id: "inputText6", placeholder: "Name" %>
+      <%= f.input :address, class: "form-control", id: "inputText6", placeholder: "Address" %>
+      <%= f.input :price, class: "form-control", id: "inputInteger6", placeholder: "Price" %>
+      <%= f.input :rooms, class: "form-control", id: "inputInteger6", placeholder: "Rooms" %>
+      <%= f.input :bathrooms, class: "form-control", id: "inputInteger6", placeholder: "Bathrooms" %>
+      <%= f.input :photo, class: "form-control", id: "inputImage6", placeholder: "Photo" %>
+      <%= f.hidden_field :photo_cache, class: "form-control", id: "inputInteger6", placeholder: "Photo" %><br>
     </div>
 
     <div class="form-actions">

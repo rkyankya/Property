@@ -70,6 +70,6 @@ class PlotsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def plot_params
-    params.require(:plot).permit(:name, :address, :price, :rooms, :bathrooms)
+    params.require(:plot).permit(:name, :address, :price, :rooms, :bathrooms, :photo, :photo_cache)
   end
 end

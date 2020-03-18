@@ -24,7 +24,7 @@
   <%= javascript_pack_tag 'application' %>
 </head>
 
-<body class="<%= controller.controller_name%>" id="<%= controller.action_name%>">
+<body id="<%= controller.controller_name%>" class="<%= controller.action_name%>">
   <% if ["public" ,"devise", "sessions"].include?(controller.controller_name) %>
   <header>
     <%= render 'layouts/nav/public' %>

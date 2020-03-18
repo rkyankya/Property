@@ -31,6 +31,10 @@ gem 'hirb'
 gem 'jquery-rails'
 gem 'simple_form'
 # gem 'friendly_id'
+gem 'carrierwave'
+gem 'fog-aws'
+# gem 'fog'
+gem 'mini_magick'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
